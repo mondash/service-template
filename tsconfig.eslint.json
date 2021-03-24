@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
-    "noEmit": true
+    "noEmit": true,
+    "rootDir": ".",
+    "baseUrl": "src",
+    "paths": {
+      "types/*": ["types/*", "types/__generated__/*"],
+      "lib/*": ["lib/*"]
+    }
   },
   "extends": "./tsconfig.json",
-  "include": ["."]
+  "include": ["."],
+  "exclude": []
 }
