@@ -1,0 +1,12 @@
+{
+  "ext": "*",
+  "exec": "ts-node .",
+  "ignore": [
+    ".git",
+    ".gitignore",
+    ".vscode",
+    "node_modules",
+    "README.md",
+    "LICENSE"
+  ]
+}
