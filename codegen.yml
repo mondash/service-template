@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - "./src/**/*.ts":
+      noRequire: true
+generates:
+  src/types/__generated__/GraphQL.ts:
+    hooks:
+      afterOneFileWrite:
+        - "prettier --write"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      contextType: "apollo-server-express#ExpressContext"
+      federation: true
+      noSchemaStitching: true
+      rootValueType: undefined
+      useIndexSignature: true
