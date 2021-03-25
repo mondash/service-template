@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // Core compiler options
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    // Strictness rules
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["node_modules"]
+}

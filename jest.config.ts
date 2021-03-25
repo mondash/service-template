@@ -7,6 +7,12 @@ const config: Config.InitialOptions = {
   testPathIgnorePatterns: ["<rootDir>/node_modules", "<rootDir>/build"],
   verbose: true,
 
+  moduleNameMapper: {
+    "^types/(.+)": ["src/types/$1", "src/types/__generated__/$1"],
+    "^lib/(.+)": ["src/lib/$1"],
+    "^(.+)": ["src/$1", "$1"],
+  },
+
   collectCoverage: true,
   collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
   coveragePathIgnorePatterns: ["__generated__"],

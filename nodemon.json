@@ -1,6 +1,6 @@
 {
   "ext": "*",
-  "exec": "ts-node .",
+  "exec": "yarn codegen && yarn start",
   "ignore": [
     ".git",
     ".gitignore",
