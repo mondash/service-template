@@ -1,25 +1,13 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    // Core compiler options
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-
-    // Strictness rules
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-
-    // Path mapping
     "outDir": "build",
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
       "types/*": ["types/*", "types/__generated__/*"],
-      "lib/*": ["lib/*"]
+      "lib/*": ["lib/*"],
+      "*": ["*", "../node_modules/*"]
     }
   },
   "include": ["src"],
