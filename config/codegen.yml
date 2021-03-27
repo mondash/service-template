@@ -1,6 +1,6 @@
 overwrite: true
 schema:
-  - "./src/**/*.ts":
+  - "src/**/*.ts":
       noRequire: true
 generates:
   src/types/__generated__/GraphQL.ts:

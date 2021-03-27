@@ -3,5 +3,11 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "files.eol": "\n",
+
+  "eslint.lintTask.options": "--config config/.eslintrc.json --ignore-path config/.eslintignore .",
+
+  "prettier.configPath": "config\\.prettierrc.json",
+  "prettier.ignorePath": "config\\.prettierignore",
+
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }

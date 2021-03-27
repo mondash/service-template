@@ -1,7 +1,7 @@
 import express from "express";
 import { Server } from "http";
 
-import { getApolloServer } from "./apollo";
+import { getApolloServer } from "apollo";
 
 type StartArgs = {
   port: number;

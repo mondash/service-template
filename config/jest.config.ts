@@ -2,8 +2,9 @@ import { Config } from "@jest/types";
 
 const config: Config.InitialOptions = {
   preset: "ts-jest",
+  rootDir: "..",
   modulePaths: ["<rootDir>/src"],
-  setupFiles: ["./jest.setup.ts"],
+  setupFiles: ["<rootDir>/config/jest.setup.ts"],
   testEnvironment: "node",
   testPathIgnorePatterns: ["<rootDir>/node_modules", "<rootDir>/build"],
   verbose: true,

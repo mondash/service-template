@@ -4,8 +4,8 @@ import TsConfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { Configuration } from "webpack";
 import nodeExternals from "webpack-node-externals";
 
-const srcPath = path.resolve(__dirname, "src");
-const buildPath = path.resolve(__dirname, "build");
+const srcPath = path.resolve(__dirname, "../src");
+const buildPath = path.resolve(__dirname, "../build");
 const tsconfigPath = path.resolve(__dirname, "tsconfig.build.json");
 
 const srcFileRegex = /\.(js|json|ts)$/;
@@ -30,11 +30,6 @@ const config: Configuration = {
   },
   plugins: [new CleanWebpackPlugin()],
   resolve: {
-    // TODO Do I need these?
-    // alias: {
-    //   types: ["types/", "types/__generated__/"],
-    // },
-    // modules: [srcPath, "node_modules"],
     extensions: [".js", ".json", ".ts"],
     plugins: [new TsConfigPathsPlugin({ configFile: tsconfigPath })],
   },
