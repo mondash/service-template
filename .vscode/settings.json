@@ -4,7 +4,10 @@
   "editor.tabSize": 2,
   "files.eol": "\n",
 
-  "eslint.lintTask.options": "--config config/.eslintrc.json --ignore-path config/.eslintignore .",
+  "eslint.options": {
+    "configFile": "config\\.eslintrc.json",
+    "ignorePath": "config\\.eslintignore"
+  },
 
   "prettier.configPath": "config\\.prettierrc.json",
   "prettier.ignorePath": "config\\.prettierignore",
