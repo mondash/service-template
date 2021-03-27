@@ -1,6 +1,6 @@
 {
   "ext": "*",
-  "exec": "yarn codegen && yarn start",
+  "exec": "yarn codegen && yarn dev",
   "ignore": [
     ".git",
     ".gitignore",

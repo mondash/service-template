@@ -11,7 +11,7 @@ export const start = ({ port }: StartArgs): Server => {
   const app = express();
   const apolloServer = getApolloServer();
 
-  const endpoint = `http://localhost:${port}/${apolloServer.graphqlPath}`;
+  const endpoint = `http://localhost:${port}${apolloServer.graphqlPath}`;
 
   apolloServer.applyMiddleware({ app, cors: false });
 

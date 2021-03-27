@@ -4,9 +4,6 @@ schema:
       noRequire: true
 generates:
   src/types/__generated__/GraphQL.ts:
-    hooks:
-      afterOneFileWrite:
-        - "prettier --write"
     plugins:
       - "typescript"
       - "typescript-resolvers"
