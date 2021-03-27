@@ -6,16 +6,16 @@
   "author": "Matthew Ondash <ondashm@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "check:lint": "eslint .",
-    "check:style": "prettier --check .",
-    "check:types": "tsc --project tsconfig.eslint.json",
-    "codegen": "graphql-codegen --config codegen.yml",
+    "build": "webpack --config config/webpack.config.ts",
+    "check:lint": "eslint --config config/.eslintrc.json --ignore-path config/.eslintignore .",
+    "check:style": "prettier --config config/.prettierrc.json --ignore-path config/.prettierignore --check .",
+    "check:types": "tsc --project config/tsconfig.eslint.json",
+    "codegen": "graphql-codegen --config config/codegen.yml",
     "dev": "ts-node -r tsconfig-paths/register .",
-    "fix:style": "prettier --write .",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "start": "nodemon"
+    "fix:style": "prettier --config config/.prettierrc.json --ignore-path config/.prettierignore --write .",
+    "start": "nodemon --config config/nodemon.json",
+    "test": "jest --config config/jest.config.ts",
+    "test:watch": "yarn test --watch"
   },
   "dependencies": {
     "apollo-server-core": "^2.21.2",
