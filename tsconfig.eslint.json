@@ -6,9 +6,9 @@
     "baseUrl": ".",
     "paths": {
       "types/*": ["src/types/*", "src/types/__generated__/*"],
-      "lib/*": ["src/lib/*"],
       "*": ["src/*", "node_modules/*"]
     }
   },
-  "include": ["./**/*"]
+  "include": ["./**/*"],
+  "exclude": ["node_modules"]
 }

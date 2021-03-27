@@ -6,17 +6,16 @@
   "author": "Matthew Ondash <ondashm@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf build && tsc",
+    "build": "webpack",
     "check:lint": "eslint .",
     "check:style": "prettier --check .",
     "check:types": "tsc --project tsconfig.eslint.json",
     "codegen": "graphql-codegen --config codegen.yml",
-    "codegen:watch": "yarn codegen --watch",
-    "dev": "nodemon",
+    "dev": "ts-node -r tsconfig-paths/register .",
     "fix:style": "prettier --write .",
     "test": "jest",
-    "test:watch": "test --watch",
-    "start": "ts-node -r tsconfig-paths/register ."
+    "test:watch": "jest --watch",
+    "start": "nodemon"
   },
   "dependencies": {
     "apollo-server-core": "^2.21.2",
@@ -31,19 +30,24 @@
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.21",
     "@types/node": "^14.14.35",
+    "@types/webpack-node-externals": "^2.5.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "jest": "^26.6.3",
     "jest-watch-typeahead": "^0.6.1",
     "nodemon": "^2.0.7",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
     "ts-jest": "^26.5.4",
+    "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.2.3"
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
