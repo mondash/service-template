@@ -1,8 +1,6 @@
 import { GraphQLSchemaModule } from "apollo-server-core";
 import { gql } from "apollo-server-express";
 
-import * as GraphQL from "types/GraphQL";
-
 const typeDefs = gql`
   type Query {
     hello: String!

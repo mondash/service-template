@@ -6,9 +6,9 @@ import nodeExternals from "webpack-node-externals";
 
 const srcPath = path.resolve(__dirname, "../src");
 const buildPath = path.resolve(__dirname, "../build");
-const tsconfigPath = path.resolve(__dirname, "tsconfig.build.json");
+const tsconfigPath = path.resolve(__dirname, "tsconfig.json");
 
-const srcFileRegex = /\.(js|json|ts)$/;
+const srcFileRegex = /(?!\.test)\.(js|json|ts)$/;
 
 const config: Configuration = {
   mode: "production",

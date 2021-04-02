@@ -3,13 +3,20 @@ schema:
   - "src/**/*.ts":
       noRequire: true
 generates:
-  src/types/__generated__/GraphQL.ts:
+  "src/types/__generated__/graphql.d.ts":
     plugins:
-      - "typescript"
-      - "typescript-resolvers"
-    config:
-      contextType: "apollo-server-express#ExpressContext"
-      federation: true
-      noSchemaStitching: true
-      rootValueType: undefined
-      useIndexSignature: true
+      - add:
+          content:
+            - "declare global {"
+            - "declare namespace GraphQL {"
+      - add:
+          content: "}}"
+          placement: "append"
+      - typescript:
+          enumsAsTypes: true
+      - typescript-resolvers:
+          contextType: "apollo-server-express#ExpressContext"
+          federation: true
+          noSchemaStitching: true
+          rootValueType: "undefined"
+          useIndexSignature: true
