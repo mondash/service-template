@@ -3,7 +3,7 @@ schema:
   - "src/**/*.ts":
       noRequire: true
 generates:
-  "src/__generated__/graphql.d.ts":
+  "__generated__/graphql.d.ts":
     plugins:
       - add:
           content:
@@ -20,3 +20,7 @@ generates:
           noSchemaStitching: true
           rootValueType: "undefined"
           useIndexSignature: true
+  "__generated__/graphql-introspection.json":
+    plugins:
+      - introspection:
+          federation: true
