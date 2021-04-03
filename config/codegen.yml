@@ -3,12 +3,12 @@ schema:
   - "src/**/*.ts":
       noRequire: true
 generates:
-  "src/types/__generated__/graphql.d.ts":
+  "src/__generated__/graphql.d.ts":
     plugins:
       - add:
           content:
             - "declare global {"
-            - "declare namespace GraphQL {"
+            - "namespace GraphQL {"
       - add:
           content: "}}"
           placement: "append"
